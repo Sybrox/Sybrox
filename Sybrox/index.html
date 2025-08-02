@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home</title>
+  <link rel="stylesheet" href="Styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar">
+    <div class="navbar-top">
+      <div class="logo">
+        <img src="image/Logo.png" alt="sybrox logo" />
+      </div>
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="nav-wrapper">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="About.html">About us</a></li>
+        <li><a href="Courses.html">IT Courses</a></li>
+        <li><a href="Intenship.html">Internship</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-right">
+      <a href="Contact.html">Contact us</a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </nav>
+
+  <script>
+   
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      const text = link.textContent;
+      link.textContent = '';
+      [...text].forEach((char, index) => {
+        const span = document.createElement('span');
+        span.textContent = char;
+        span.style.transitionDelay = `${index * 50}ms`;
+        link.appendChild(span);
+      });
+    });
+
+  
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggleBtn.addEventListener('click', () => {
+      toggleBtn.classList.toggle('open');
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+
+
+<section class="hero" data-aos="fade-up">
+  <div class="hero-content">
+    <h1 data-aos="fade-up" data-aos-delay="100">Tech Careers Start Here.</h1>
+    <p data-aos="fade-up" data-aos-delay="200">
+      Learn modern skills, intern on real projects and land a job you'll love.
+    </p>
+    <a href="Courses.html" class="cta-btn" data-aos="zoom-in" data-aos-delay="300">Explore Programs</a>
+  </div>
+</section>
+
+
+<section class="who-we-are" data-aos="fade-up">
+  <div class="content">
+    <div class="text" data-aos="fade-up">
+      <div class="title">
+        <h2 data-aos="fade-up">Who We Are</h2>
+      </div>
+      <p data-aos="fade-up" data-aos-delay="100">
+        Sybrox is a next-generation IT training and career-launch platform built for the real world. We exist to bridge the gap between what students learn in classrooms and what companies expect on the job. Our focus is simple: teach only what’s relevant, deliver it through hands-on learning, and back it up with real project experience and placement support.
+      </p>
+      <p data-aos="fade-up" data-aos-delay="200">
+        We’re not just another training institute — we’re a launchpad for anyone serious about building a career in tech. From coding and design to testing and AI, our programs are led by industry professionals and powered by live projects, paid internships, and guaranteed job opportunities. Whether you’re a fresher, a career switcher, or someone looking to level up, Sybrox is your partner in turning skill into success.
+      </p>
+      <a href="About.html" class="learn-more-btn" data-aos="zoom-in" data-aos-delay="300">Learn More</a>
+    </div>
+    <div class="image" data-aos="fade-up" data-aos-delay="400">
+      <img src="image/Who home.jpg" alt="Who We Are Image" />
+    </div>
+  </div>
+</section>
+
+
+<section class="Four" data-aos="fade-up">
+  <section class="reasons-section">
+    <h2 data-aos="fade-up">Four reasons why you should<br />choose our service</h2>
+    
+    <div class="reasons-grid">
+      <div class="reason-card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="image/learn01.jpg" alt="Reason 1">
+        <div class="reason-content">
+          <div class="line-wrap">
+            <span class="number">01</span>
+            <span class="reason-text">Learn What Companies Actually Use</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="reason-card" data-aos="zoom-in" data-aos-delay="200">
+        <img src="image/project02.jpg" alt="Reason 2">
+        <div class="reason-content">
+          <div class="line-wrap">
+            <span class="number">02</span>
+            <span class="reason-text">Work on Real Projects</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="reason-card" data-aos="zoom-in" data-aos-delay="300">
+        <img src="image/Intenship03.jpg" alt="Reason 3">
+        <div class="reason-content">
+          <div class="line-wrap">
+            <span class="number">03</span>
+            <span class="reason-text">Paid Internships with Placement Guarantee</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="reason-card" data-aos="zoom-in" data-aos-delay="400">
+        <img src="image/Mentor04.jpg" alt="Reason 4">
+        <div class="reason-content">
+          <div class="line-wrap">
+            <span class="number">04</span>
+            <span class="reason-text">Mentorship That Actually Matters</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<section class="features-section" data-aos="fade-up">
+  
+  <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+    <div class="card-content">
+      <div class="icon">
+        <img src="image/cloud-computing.png" alt="Icon" />
+      </div>
+      <h3>Data Synchronization & Integration</h3>
+      <p>Learn how to manage, clean, and sync data across platforms and systems — a vital skill in full-stack development, analytics, and cloud environments.</p>
+    </div>
+    <div class="hover-image">
+      <img src="image/data.jpg" alt="Hover Image" />
+    </div>
+  </div>
+
+  <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+    <div class="card-content">
+      <div class="icon">
+        <img src="image/mobile-development.png" alt="Icon" />
+      </div>
+      <h3>Mobile App Development</h3>
+      <p>Master the end-to-end creation of mobile apps using Flutter or native platforms. Build responsive, real-world applications that run seamlessly across devices.</p>
+    </div>
+    <div class="hover-image">
+      <img src="image/mobile.jpg" alt="Hover Image" />
+    </div>
+  </div>
+
+  <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
+    <div class="card-content">
+      <div class="icon">
+        <img src="image/automation.png" alt="Icon" />
+      </div>
+      <h3>Process Automation</h3>
+      <p>Gain expertise in automating business and software workflows using tools like Selenium, Python scripting, and robotic process automation (RPA).</p>
+    </div>
+    <div class="hover-image">
+      <img src="image/automation.jpg" alt="Hover Image" />
+    </div>
+  </div>
+
+  <div class="feature-card" data-aos="zoom-in" data-aos-delay="400">
+    <div class="card-content">
+      <div class="icon">
+        <img src="image/artificial-intelligence.png" alt="Icon" />
+      </div>
+      <h3>AI & Event Processing</h3>
+      <p>Work with real-time data, event-driven architecture, and artificial intelligence to build smarter, faster, and more responsive systems.</p>
+    </div>
+    <div class="hover-image">
+      <img src="image/AI.jpg" alt="Hover Image" />
+    </div>
+  </div>
+
+  <div class="feature-card" data-aos="zoom-in" data-aos-delay="500">
+    <div class="card-content">
+      <div class="icon">
+        <img src="image/writer.png" alt="Icon" />
+      </div>
+      <h3>Content & Product Management</h3>
+      <p>Understand how to manage digital content, websites, and SaaS products — including CMS tools, deployment processes, and agile collaboration.</p>
+    </div>
+    <div class="hover-image">
+      <img src="image/content.jpg" alt="Hover Image" />
+    </div>
+  </div>
+
+  <div class="feature-card" data-aos="zoom-in" data-aos-delay="600">
+    <div class="card-content">
+      <div class="icon">
+        <img src="image/privacy-policy.png" alt="Icon" />
+      </div>
+      <h3>Information Security</h3>
+      <p>We provide training on securing applications, networks, and data systems using modern tools and techniques like ethical hacking, cryptography, and cybersecurity best practices.</p>
+    </div>
+    <div class="hover-image">
+      <img src="image/security.jpg" alt="Hover Image" />
+    </div>
+  </div>
+
+</section>
+
+
+<section class="section-three" data-aos="fade-up">
+  <div class="overlay-card" data-aos="zoom-in" data-aos-delay="100">
+    <img src="image/quote.jpg" alt="Typing hands" class="background-image" />
+    <div class="overlay-text" data-aos="fade-in" data-aos-delay="200">
+      <p>
+        “You won’t just copy code from slides — you’ll build real solutions that solve real problems, for real users. That’s how you grow into a true professional.”
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer>
+  <div class="waves">
+    <div class="wave" id="wave1"></div>
+    <div class="wave" id="wave2"></div>
+    <div class="wave" id="wave3"></div>
+    <div class="wave" id="wave4"></div>
+  </div>
+  <ul class="social_icon">
+    <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+    <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+    <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+    <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+  </ul>
+  
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="Courses.html">IT Courses</a></li>
+    <li><a href="Intenship.html">Intenship</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+  <p class="footerpara">&copy2025 Sybrox Tech | All Rights Reserved</p>
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Courses</title>
+  <link rel="stylesheet" href="Courses.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="navbar-top">
+      <div class="logo">
+        <img src="image/Logo.png" alt="sybrox logo" />
+      </div>
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="nav-wrapper">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="About.html">About us</a></li>
+        <li><a href="Courses.html" class="active">IT Courses</a></li>
+        <li><a href="Intenship.html">Internship</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-right">
+      <a href="Contact.html">Contact us</a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </nav>
+
+  <script>
+   
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      const text = link.textContent;
+      link.textContent = '';
+      [...text].forEach((char, index) => {
+        const span = document.createElement('span');
+        span.textContent = char;
+        span.style.transitionDelay = `${index * 50}ms`;
+        link.appendChild(span);
+      });
+    });
+
+ 
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggleBtn.addEventListener('click', () => {
+      toggleBtn.classList.toggle('open');
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+
+<section class="hero" data-aos="fade-up">
+  <div class="hero-content" data-aos="fade-in" data-aos-delay="100">
+    <h1>IT Courses</h1>
+    <p>Learn Today’s Most In-Demand Technologies<br>From Scratch to Placement</p>
+  </div>
+</section>
+
+<section class="course-cards" data-aos="fade-up">
+
+  <div class="card" data-aos="zoom-in" data-aos-delay="100">
+    <div class="card-inner">
+      <div class="card-front" style="background-image: url('image/fullstack.avif');">
+        <div class="card-content">
+          <span>⏱ 3 Months</span>
+          <h3>Full Stack Development</h3>
+          <p>₹ 30,000</p>
+        </div>
+      </div>
+      <div class="card-back">
+        <h3>Full Stack Development</h3>
+        <p>Become a job-ready developer by mastering both frontend and backend technologies like HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB. Build real-world web applications and a strong portfolio.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-aos="zoom-in" data-aos-delay="200">
+    <div class="card-inner">
+      <div class="card-front" style="background-image: url('image/Data Science & Analytics.jpg');">
+        <div class="card-content">
+          <span>⏱ 3 Months</span>
+          <h3>Data Science & Analytics</h3>
+          <p>₹ 30,000</p>
+        </div>
+      </div>
+      <div class="card-back">
+        <h3>Data Science & Analytics</h3>
+        <p>Learn Python, data visualization, statistics, machine learning, and tools like Pandas, NumPy, and Power BI. Perfect for roles in data analytics, data science, and business intelligence.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-aos="zoom-in" data-aos-delay="300">
+    <div class="card-inner">
+      <div class="card-front" style="background-image: url('image/AIML.jpg');">
+        <div class="card-content">
+          <span>⏱ 2 Months</span>
+          <h3>Artificial Intelligence & Machine Learning</h3>
+          <p>₹ 30,000</p>
+        </div>
+      </div>
+      <div class="card-back">
+        <h3>Artificial Intelligence & Machine Learning</h3>
+        <p>Dive deep into supervised learning, neural networks, deep learning, and AI model deployment. Get hands-on with TensorFlow, Keras, and real-world datasets.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-aos="zoom-in" data-aos-delay="400">
+    <div class="card-inner">
+      <div class="card-front" style="background-image: url('image/UIUX Design.jpg');">
+        <div class="card-content">
+          <span>⏱ 3 Months</span>
+          <h3> UI/UX Design</h3>
+          <p>₹ 30,000</p>
+        </div>
+      </div>
+      <div class="card-back">
+        <h3> UI/UX Design</h3>
+        <p>Master design thinking, wireframing, prototyping, and tools like Figma, Adobe XD, and Sketch. Learn how to create intuitive, modern user interfaces and deliver great user experiences.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card" data-aos="zoom-in" data-aos-delay="500">
+    <div class="card-inner">
+      <div class="card-front" style="background-image: url('image/Automation Testing.jpg');">
+        <div class="card-content">
+          <span>⏱ 3 Months</span>
+          <h3>Automation Testing</h3>
+          <p>₹ 30,000</p>
+        </div>
+      </div>
+      <div class="card-back">
+        <h3>Automation Testing</h3>
+        <p>Train to become a QA automation expert. Learn how to automate software testing using real-world projects, frameworks, and testing pipelines.</p>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="card" data-aos="zoom-in" data-aos-delay="600">
+    <div class="card-inner">
+      <div class="card-front" style="background-image: url('image/Mobile App Development.jpg');">
+        <div class="card-content">
+          <span>⏱ 3 Months</span>
+          <h3>Mobile App Development</h3>
+          <p>₹ 30,000</p>
+        </div>
+      </div>
+      <div class="card-back">
+        <h3>Mobile App Development</h3>
+        <p>Design and develop mobile apps for Android and iOS using Flutter. Build responsive, production-level apps that get noticed.</p>
+      </div>
+    </div>
+  </div>
+
+ 
+  <div class="card" data-aos="zoom-in" data-aos-delay="700">
+    <div class="card-inner">
+      <div class="card-front" style="background-image: url('image/Web Development.jpg');">
+        <div class="card-content">
+          <span>⏱ 3 Months</span>
+          <h3>Web Development</h3>
+          <p>₹ 30,000</p>
+        </div>
+      </div>
+      <div class="card-back">
+        <h3>Web Development</h3>
+        <p>Specialize in frontend web development using HTML5, CSS3, JavaScript, and React. Ideal for those who want to quickly enter the job market with UI development skills.</p>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="card" data-aos="zoom-in" data-aos-delay="800">
+    <div class="card-inner">
+      <div class="card-front" style="background-image: url('image/DevOps & Cloud Computing.jpg');">
+        <div class="card-content">
+          <span>⏱ 3 Months</span>
+          <h3>DevOps & Cloud Computing</h3>
+          <p>₹ 30,000</p>
+        </div>
+      </div>
+      <div class="card-back">
+        <h3>DevOps & Cloud Computing</h3>
+        <p>Master CI/CD, Docker, Kubernetes, Git, Jenkins, AWS, and Azure to manage cloud infrastructure and build scalable apps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="container" data-aos="fade-up">
+  <div class="image-section" data-aos="fade-in" data-aos-delay="100">
+    <img src="image/Course feature.jpg" alt="Man in front of trading screens" />
+  </div>
+  <div class="features-section" data-aos="fade-up" data-aos-delay="200">
+    <h2>Course Features</h2>
+    
+    <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
+      <h3>Hands-On Projects</h3>
+      <p>Every course includes 3–5 real-world projects to help you build a job-ready portfolio.</p>
+    </div>
+    
+    <div class="feature-card" data-aos="zoom-in" data-aos-delay="400">
+      <h3>Expert Mentorship</h3>
+      <p>Learn directly from industry professionals with experience in startups and product companies.</p>
+    </div>
+    
+    <div class="feature-card" data-aos="zoom-in" data-aos-delay="500">
+      <h3>Certification</h3>
+      <p>Get a Sybrox certificate that reflects your real-world skills — not just course attendance.</p>
+    </div>
+    
+    <div class="feature-card" data-aos="zoom-in" data-aos-delay="600">
+      <h3>Placement Support</h3>
+      <p>Resume building, mock interviews, referrals, and access to hiring partners — we help you get placed.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+  
+<footer>
+  <div class="waves">
+    <div class="wave" id="wave1"></div>
+    <div class="wave" id="wave2"></div>
+    <div class="wave" id="wave3"></div>
+    <div class="wave" id="wave4"></div>
+  </div>
+  <ul class="social_icon">
+    <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+    <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+    <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+    <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+  </ul>
+  
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="Courses.html">IT Courses</a></li>
+    <li><a href="Intenship.html">Intenship</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+  <p class="footerpara">&copy2025 Sybrox Tech | All Rights Reserved</p>
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>

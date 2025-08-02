@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us</title>
+  <link rel="stylesheet" href="About.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="navbar-top">
+      <div class="logo">
+        <img src="image/Logo.png" alt="sybrox logo" />
+      </div>
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="nav-wrapper">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="About.html" class="active">About us</a></li>
+        <li><a href="Courses.html">IT Courses</a></li>
+        <li><a href="Intenship.html">Internship</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-right">
+      <a href="Contact.html">Contact us</a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </nav>
+
+  <script>
+    
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      const text = link.textContent;
+      link.textContent = '';
+      [...text].forEach((char, index) => {
+        const span = document.createElement('span');
+        span.textContent = char;
+        span.style.transitionDelay = `${index * 50}ms`;
+        link.appendChild(span);
+      });
+    });
+
+   
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggleBtn.addEventListener('click', () => {
+      toggleBtn.classList.toggle('open');
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+
+<section class="hero" data-aos="fade-up">
+  <div class="hero-content" data-aos="zoom-in" data-aos-delay="100">
+    <h1>About us</h1>
+    <p>Empowering the Next Generation of Tech Talent</p>
+  </div>
+</section>
+
+<div class="container" data-aos="fade-up" data-aos-delay="150">
+ 
+  <div class="left" data-aos="fade-up" data-aos-delay="200">
+    <h2>Your Launchpad to a Successful Tech Career</h2>
+    <p>
+      The education should go beyond theory — it should prepare you for the real world.
+      That’s why our programs are built around industry-led training, real-time internships,
+      and guaranteed job placement support. <br><br>
+      Founded by passionate tech professionals, Sybrox was created with a mission to empower
+      aspiring developers, designers, testers, and data professionals with the skills and experience
+      employers actually look for. Every course we offer is project-based, hands-on, and aligned with
+      in-demand technologies.
+    </p>
+  </div>
+
+
+  <div class="middle" data-aos="zoom-in" data-aos-delay="250">
+    <img src="image/Who home.jpg" alt="Roofing Work" />
+  </div>
+
+
+  <div class="right" data-aos="fade-up" data-aos-delay="300">
+    <div class="accordion">
+      <div class="accordion-item active" data-aos="fade-in" data-aos-delay="350">
+        <button class="accordion-header">Our Mission</button>
+        <div class="accordion-content">
+          <p>
+            Our mission is to bridge the gap between traditional education and real-world employment
+            by offering hands-on, industry-relevant training in today’s most in-demand fields such as
+            Full Stack Development, Data Science, AI & ML, Mobile App Development, UI/UX Design, and
+            Automation Testing.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-in" data-aos-delay="400">
+        <button class="accordion-header">Our Vision</button>
+        <div class="accordion-content">
+          <p>
+            Our vision is to become India’s most trusted platform for launching successful tech careers,
+            empowering individuals to become confident, skilled, and job-ready — regardless of their
+            academic background or experience.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-in" data-aos-delay="450">
+        <button class="accordion-header">Our Value</button>
+        <div class="accordion-content">
+          <p>
+            Underpinning our work are strong core values: a belief in skills over degrees,
+            a commitment to learning-by-doing, a mentorship-driven culture, and a passion for continuous innovation.
+            We strive to create a diverse, inclusive, and supportive community where every learner can grow
+            into a tech professional who builds, innovates, and makes an impact.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script>
+    const headers = document.querySelectorAll('.accordion-header');
+    headers.forEach(header => {
+      header.addEventListener('click', () => {
+        document.querySelectorAll('.accordion-item').forEach(item => {
+          item.classList.remove('active');
+        });
+        header.parentElement.classList.add('active');
+      });
+    });
+  </script>
+
+<div class="sybrox-section" data-aos="fade-up">
+
+  <div class="text-box" data-aos="fade-up" data-aos-delay="100">
+    <h2>Why Sybrox Stands Out</h2>
+    <ul>
+      <li>Real-time paid internships with Sybrox product teams or live client projects</li>
+      <li>Guaranteed placement support after course completion</li>
+      <li>Expert-led sessions, portfolio projects, and interview prep</li>
+      <li>Modern curriculum, agile learning, and career-focused outcomes</li>
+      <li>A startup mindset with corporate-level execution</li>
+    </ul>
+  </div>
+
+
+  <div class="image-box" data-aos="zoom-in" data-aos-delay="200">
+    <img src="image/AI.jpg" alt="AI Developer" />
+  </div>
+</div>
+
+<section class="career-banner" data-aos="fade-up" data-aos-delay="300">
+  <div class="career-content" data-aos="fade-in" data-aos-delay="400">
+    <h2>“We’re not building courses. We’re building careers.”</h2>
+  </div>
+</section>
+
+
+<footer>
+  <div class="waves">
+    <div class="wave" id="wave1"></div>
+    <div class="wave" id="wave2"></div>
+    <div class="wave" id="wave3"></div>
+    <div class="wave" id="wave4"></div>
+  </div>
+  <ul class="social_icon">
+    <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+    <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+    <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+    <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+  </ul>
+  
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="Courses.html">IT Courses</a></li>
+    <li><a href="Intenship.html">Intenship</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+  <p class="footerpara">&copy2025 Sybrox Tech | All Rights Reserved</p>
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>

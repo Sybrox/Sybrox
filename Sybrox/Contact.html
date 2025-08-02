@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact</title>
+  <link rel="stylesheet" href="Contact.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="navbar-top">
+      <div class="logo">
+        <img src="image/Logo.png" alt="sybrox logo" />
+      </div>
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="nav-wrapper">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="About.html">About us</a></li>
+        <li><a href="Courses.html" >IT Courses</a></li>
+        <li><a href="Intenship.html" >Internship</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-right">
+      <a href="Contact.html" class="active">Contact us</a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </nav>
+
+  <script>
+    
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      const text = link.textContent;
+      link.textContent = '';
+      [...text].forEach((char, index) => {
+        const span = document.createElement('span');
+        span.textContent = char;
+        span.style.transitionDelay = `${index * 50}ms`;
+        link.appendChild(span);
+      });
+    });
+
+ 
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggleBtn.addEventListener('click', () => {
+      toggleBtn.classList.toggle('open');
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+
+
+<section class="hero">
+    <div class="hero-content">
+      <h1>Contact us </h1>
+    </div>
+  </section>
+
+
+
+
+ <div class="contact-wrapper">
+    <div class="contact-content">
+      <h1>Get in Touch</h1>
+      <p class="contact-subheading">We’d love to hear from you! Reach out with questions, partnership inquiries, or anything else. Our team typically responds within 24 hours.</p>
+
+     
+      <div class="contact-details">
+        <p><strong>Email:</strong> <a href="mailto:sybroxtech@gmail.com">sybroxtech@gmail.com</a></p>
+        <p><strong>Phone:</strong> +91 xxxxxxxxxx</p>
+        <p><strong>Address:</strong>Chennai, India</p>
+        <p><strong>Working Hours:</strong> Mon–Fri, 9:00 AM – 6:00 PM IST</p>
+      </div>
+
+     
+      <form action="#" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+        </div>
+        <button type="submit" class="contact-submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+
+  
+<footer>
+  <div class="waves">
+    <div class="wave" id="wave1"></div>
+    <div class="wave" id="wave2"></div>
+    <div class="wave" id="wave3"></div>
+    <div class="wave" id="wave4"></div>
+  </div>
+  <ul class="social_icon">
+    <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+    <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+    <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+    <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+  </ul>
+  
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="Courses.html">IT Courses</a></li>
+    <li><a href="Intenship.html">Intenship</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+  <p class="footerpara">&copy2025 Sybrox Tech | All Rights Reserved</p>
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
