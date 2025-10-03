@@ -1,0 +1,621 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+   overflow-x: hidden;
+}
+
+    .navbar {
+      background-color: #002c60;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 30px;
+      position: relative;
+      z-index: 1000;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      font-size: 18px;
+      font-weight: 500;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      perspective: 500px;
+    }
+
+    .nav-links a.active {
+      color: #ff4c4c;
+      font-weight: bold;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-right a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-right a:hover {
+      color: #ff4c4c;
+    }
+
+    .nav-right i {
+      font-size: 22px;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      transition: 0.3s;
+    }
+
+    .menu-toggle.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: #002c60;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 20px 0;
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-right {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .navbar {
+        flex-wrap: wrap;
+      }
+
+      .navbar-top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-wrapper {
+        width: 100%;
+      }
+    }
+
+
+
+
+
+
+.hero {
+  height: 87vh;
+  background: url('image/About\ hero.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+  color: white;
+  position: relative;
+}
+
+/* Dark overlay for better text contrast */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 46px;
+  font-weight: 700;
+  color: #F24444;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 25px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+
+
+
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 40px;
+  flex-wrap: wrap;
+
+  max-width: 1300px;    /* 👈 Set a max width */
+  margin: 0 auto;        /* 👈 Center the container */
+}
+
+.left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.left h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.left p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.middle {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 280px;
+}
+
+.middle img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 10px;
+}
+
+.right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.accordion-item {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.accordion-header {
+  background: #f5f5f5;
+  color: #000;
+  padding: 16px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.accordion-item.active .accordion-header {
+  background: #002c60;
+  color: white;
+}
+
+.accordion-content {
+  display: none;
+  padding: 16px;
+  background: #fff;
+  color: #444;
+}
+
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .left, .middle, .right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .middle img {
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+.sybrox-section {
+  display: flex;
+  width: 100vw;               /* Full viewport width */
+  background-color: #fff;
+  align-items: stretch;
+  justify-content: space-between; /* Spread text and image */
+  flex-wrap: wrap;
+  margin-top: 90px;
+  margin-bottom: 50px;
+}
+
+/* LEFT: Text content box */
+.text-box {
+  background-color: #003366;
+  color: white;
+  padding: 60px 40px;
+  width: 786px;
+  height: 604px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  margin-left: 50px;
+}
+
+.text-box ul {
+  list-style-type: disc;
+  padding-left: 0; /* optional if you use margin-left on li */
+}
+
+.text-box ul li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-left: 50px; /* controls bullet indentation */
+}
+
+
+/* RIGHT: Image box */
+.image-box {
+  width: 611px;
+  height: 497px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+ 
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+
+
+.career-banner {
+  position: relative;
+  width: 90%;
+  height: 400px;
+  background-image: url('image/Hand.jpg'); /* Replace with your actual image */
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto;
+  overflow: hidden;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+/* Blue overlay filter */
+.career-banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 51, 102, 0.45); /* Blue with 45% opacity */
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.career-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 0 20px;
+  max-width: 90%;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .career-banner {
+    height: 280px;
+  }
+
+  .career-content {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap');
+
+
+footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .social_icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  transform: translateX(-90px); /* Moves the icons left */
+}
+
+footer .social_icon, footer .menu {
+  position: relative;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  margin: 10px 0;
+}
+
+footer .social_icon li, footer .menu li {
+  list-style: none;
+}
+footer .social_icon li a {
+  font-size: 2em;
+  color: #ccc;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+footer .social_icon li a:hover {
+  transform: translateY(-15px);
+  color: blue;
+}
+footer .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  transform: translateX(-90px); /* This moves the whole menu left */
+}
+
+footer .menu li a {
+  font-size: 1.2em;
+  color: #ccc;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  
+}
+footer .menu li a:hover {
+  opacity: 1;
+  color: #fff;
+}
+.footerpara {
+  color: #eee;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: -130px;  /* Adjust as needed */
+  font-size: 1.1em;
+}
+
+
+/*wave and animation*/
+footer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(https://i.ibb.co/rZt4Nhg/wave.png);
+  background-size: 1000px 100px;
+}
+
+footer .wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave_02 4s linear infinite;
+}
+footer .wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 0;
+  animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animateWave_02 3s linear infinite;
+}
+
+@keyframes animateWave {
+  0%{
+    background-position-x: 1000px; 
+  }
+  100%{
+    background-position-x: 0px; 
+  }
+}
+
+@keyframes animateWave_02 {
+  0%{
+    background-position-x: 0px; 
+  }
+  100%{
+    background-position-x: 1000px; 
+  }
+}
+/* Tablet and down */
+
+/* Tablet and below */
+@media (max-width: 768px) {
+  footer {
+    padding: 40px 24px; /* More breathing space */
+  }
+
+  footer .social_icon,
+  footer .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    transform: none;         /* Neutralize the left shift */
+    gap: 12px;               /* Space between items */
+  }
+
+  footer .social_icon li a {
+    font-size: 1.6em;
+    margin: 4px 10px;
+  }
+
+  footer .menu li a {
+    font-size: 1.1em;
+    margin: 4px 10px;
+  }
+
+  footer .footerpara {
+    margin-left: 0;
+    font-size: 1em;
+    padding: 0 20px;
+    text-align: center;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  footer {
+    padding: 20px 10px;
+    overflow-x: hidden;
+    text-align: center;
+  }
+
+  footer .social_icon,
+  footer .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-20px); /* Move slightly left */
+    gap: 8px;
+    margin: 6px 0;
+  }
+
+  footer .social_icon li,
+  footer .menu li {
+    margin: 4px 6px;
+  }
+
+  footer .social_icon li a,
+  footer .menu li a {
+    font-size: 0.95em;
+    margin: 0 4px;
+  }
+
+  footer .footerpara {
+    font-size: 0.85em;
+    margin: 8px 0 0 0;
+    padding: 0 8px;
+    text-align: center;
+    transform: translateX(-20px); /* Also move text slightly left */
+  }
+}
