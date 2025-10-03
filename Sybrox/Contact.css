@@ -36,18 +36,7 @@ body {
       perspective: 500px;
     }
 
-    .nav-links a span {
-      display: inline-block;
-      transform: rotateX(0deg);
-      transform-origin: bottom;
-      opacity: 1;
-      transition: transform 0.4s ease, opacity 0.4s ease;
-    }
 
-    .nav-links a:hover span {
-      transform: rotateX(-90deg);
-      opacity: 0;
-    }
 
     .nav-links a.active {
       color: #ff4c4c;
